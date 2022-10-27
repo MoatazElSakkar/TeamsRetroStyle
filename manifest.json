@@ -1,0 +1,29 @@
+{
+    "name": "Microsoft Teams Retro",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "An extension to modify the behavior of microsoft teams",
+      "content_scripts": [
+        {
+              "matches": ["*://teams.microsoft.com/*"],
+              "js": ["modify_teams_style.js"],
+              "run_at": "document_end" //default document end
+        },
+          {
+                "matches": ["*://teams.microsoft.com/*"],
+                "js": ["modify_teams_style.js"],
+                "all_frames": true,
+                "run_at": "document_end" //default document end
+          }
+    ],
+    "permissions": ["scripting","tabs","webNavigation"],
+    "web_accessible_resources":[{
+      "resources": [ "teams_logo.png","teams_logo_icon.png"],
+      "matches": [ "*://teams.microsoft.com/*" ]
+    }],
+    "icons": { 
+      "16": "teams_logo_icon.png",
+      "48": "teams_logo_icon.png",
+     "128": "teams_logo_icon.png" },
+    "host_permissions": ["*://teams.microsoft.com/*"]
+}
