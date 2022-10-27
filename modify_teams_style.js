@@ -23,6 +23,7 @@ for (i=0;i<links.length;i++)
   styletag.innerText+=".ms-Image-image{border-radius:"+radius+" !important;}"
   styletag.innerText+=".circle.inner{visibility: collapse; }"
   styletag.innerText+=".ts-calling-participant-stream{border-radius:"+radius+" !important;}"
+  styletag.innerText+=".left-rail-item .img-wrapper{border-radius:"+radius+" !important;}"
 
   document.getElementsByTagName("head")[0]?.appendChild(styletag);
   document.querySelector('.embedded-electron-webview')?.contentDocument?.getElementsByTagName("head")[0]?.appendChild(styletag);
